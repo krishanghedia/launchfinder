@@ -1,38 +1,284 @@
-.App {
+:root {
+  --main-light-grey: #a9a9a9;
+  --main-white: #fff;
+  --main-dark-blue: #050424;
+  --main-black: #1a1a1a;
+  --default-font-size: 1.5rem;
+  --font-size-large: 2.5rem;
+  --font-size-med: 1.7rem;
+  --font-size-sm: 1.3rem;
+  --border-radius: 5px;
+  --center-align: 0 auto;
+  --rounded-small: 0.5rem;
+  --inside-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  --button-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px,
+    rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px,
+    rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  --default-bottom-space: 1rem;
+  --box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  --border-radius: 5rem;
+  --default-padding: 1rem;
+}
+
+.button {
+  padding: 3rem;
+  width: 30%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FLUID AND RESPONSIVE IMAGES */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    rgb(12, 0, 21) 0%,
+    rgb(62, 3, 72) 50%,
+    rgb(14, 0, 21) 100%
+  );
+  background-attachment: fixed;
+  line-height: 1.4;
+}
+
+@font-face {
+  font-family: "Timer";
+  src: url(./fonts/DS-DIGII.woff2);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: inherit;
+  color: var(--main-white);
+}
+
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexContainer {
+  width: 100%;
+}
+
+.errorContainer {
+  margin: var(--center-align);
+  border-radius: 20px;
+  /* background-color: var(--main-black); */
+  width: 30rem;
+  /* box-sizing: content-box;
+  border-width: 8px;
+  border-style: solid;
+  border-image: linear-gradient(to right bottom, #000000, #b6b6b6); */
+  /* border-image-slice: 1; */
+  /* box-shadow: var(--box-shadow); */
+}
+
+span {
+  display: block;
+}
+
+.halText {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.errorText {
+  color: var(--main-white);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+}
+
+.halImage {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 2rem;
+}
+
+.hal {
+  width: 15%;
+}
+
+.header,
+.inputContainer,
+.launchDataContainer,
+.errorContainer {
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: var(--font-size-med);
+  margin: var(--center-align);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+h3 {
+  font-size: var(--font-size-med);
+  margin-bottom: 1rem;
+}
+
+.inputContainer {
+  width: 100%;
+  margin: var(--center-align);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input,
+.sort {
+  font-family: inherit;
+  border-radius: var(--border-radius);
+  border-style: none;
+  box-shadow: var(--box-shadow);
+  padding: var(--default-padding);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  width: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loadMoreContainer {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.loadMoreButton {
+  background-color: var(--main-white);
+  color: var(--main-black);
+  margin-bottom: 4rem;
+  padding: 1rem;
+  width: 10%;
+  border-radius: var(--border-radius);
+  border-style: none;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sort {
+  margin-right: 1rem;
+}
+
+.logo {
+  margin: var(--center-align);
+  width: 30%;
+}
+
+.launchDataContainer {
+  width: 33.33%;
+}
+
+.missionInfoContainer {
+  background-color: var(--main-light-grey);
+  max-width: 50rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.launchContentContainer {
+  padding: var(--default-padding);
+}
+
+.header h1 {
+  font-weight: 400;
+}
+
+.launchName,
+.missionInfoText,
+.currentStatus {
+  margin-bottom: var(--default-bottom-space);
+}
+
+.currentStatus {
+  display: inline-flex;
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+
+.launchCountdown {
+  font-size: 1.3rem;
+}
+
+.launchCountdownContent {
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+}
+
+.daysContainer,
+.hoursContainer,
+.minutesContainer,
+.secondsContainer {
+  margin-right: 1rem;
+  text-align: center;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  color: inherit;
+  display: inline-block;
+  font-family: "Timer";
+  text-transform: capitalize;
+}
+
+.launchName {
+  font-size: 2.2rem;
+}
+
+.missionInfoText {
+  font-weight: 800;
+}
+
+.read-or-hide {
+  color: rgb(62, 3, 72);
+  cursor: pointer;
+}
+
+.date {
+  font-size: var(--font-size-sm);
+  margin: 1rem 0 1rem 0;
+  border-bottom: 1px solid var(--main-white);
+  padding-bottom: 0.5rem;
+}
+
+.dataRefreshTimer {
+  color: var(--main-white);
+}
+
+.button {
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 10%;
+  border-radius: var(--border-radius);
+  border-style: none;
+  box-shadow: var(--box-shadow);
+  align-self: center;
+  margin-top: 3rem;
 }
