@@ -1,0 +1,52 @@
+@media screen and (max-width: 1110px) {
+  .launchCountdownContent {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  h1,
+  h3 {
+    font-size: var(--font-size-sm);
+  }
+
+  .header,
+  .inputContainer,
+  .launchDataContainer,
+  .errorContainer {
+    padding: 1.3rem;
+  }
+
+  input,
+  .sort {
+    padding: 0.5rem;
+  }
+
+  .logo {
+    width: 45%;
+  }
+
+  .loadMoreButton {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .launchDataContainer {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .launchDataContainer {
+    width: 100%;
+  }
+
+  .launchCountdownContent {
+    flex-direction: row;
+  }
+
+  .loadMoreButton {
+    width: 30%;
+  }
+}

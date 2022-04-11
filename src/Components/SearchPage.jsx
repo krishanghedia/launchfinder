@@ -3,6 +3,7 @@ import { useState } from "react";
 import LaunchContent from "./LaunchContent";
 import halImage from "../images/hal.png";
 import "../App.css";
+import "../media-queries.css";
 
 const SearchPage = (props) => {
   console.log(props);
