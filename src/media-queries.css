@@ -38,6 +38,10 @@
 }
 
 @media screen and (max-width: 580px) {
+  .logo {
+    width: 75%;
+  }
+
   .launchDataContainer {
     width: 100%;
   }
@@ -48,5 +52,14 @@
 
   .loadMoreButton {
     width: 30%;
+  }
+
+  .sort,
+  input {
+    width: 100%;
+  }
+
+  .sort {
+    margin-bottom: 1rem;
   }
 }
