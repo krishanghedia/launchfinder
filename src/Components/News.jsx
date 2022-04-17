@@ -26,7 +26,6 @@ const News = () => {
       <div className="newsFlexContainer">
         {newsData &&
           newsData.map((news, idx) => {
-            // console.log(news.url);
             return (
               <div className="newsArticleContainer" key={idx}>
                 <img src={news.imageUrl} className="newsImage"></img>
