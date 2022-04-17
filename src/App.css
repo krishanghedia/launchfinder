@@ -67,6 +67,18 @@ h5 {
   color: var(--main-white);
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
@@ -79,14 +91,7 @@ h5 {
 .errorContainer {
   margin: var(--center-align);
   border-radius: 20px;
-  /* background-color: var(--main-black); */
   width: 30rem;
-  /* box-sizing: content-box;
-  border-width: 8px;
-  border-style: solid;
-  border-image: linear-gradient(to right bottom, #000000, #b6b6b6); */
-  /* border-image-slice: 1; */
-  /* box-shadow: var(--box-shadow); */
 }
 
 span {
@@ -119,14 +124,9 @@ span {
 .header,
 .inputContainer,
 .launchDataContainer,
-.errorContainer {
+.errorContainer,
+.newsFlexContainer {
   padding: 2rem;
-}
-
-.header {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
 h1 {
@@ -178,12 +178,21 @@ input {
   cursor: pointer;
 }
 
+.btn {
+  background-color: var(--main-white);
+  border-radius: var(--border-radius);
+  border-style: none;
+  color: var(--main-black);
+  cursor: pointer;
+  padding: 0.4rem;
+  width: 100%;
+}
+
 .sort {
   margin-right: 1rem;
 }
 
 .logo {
-  margin: var(--center-align);
   width: 30%;
 }
 
@@ -192,14 +201,30 @@ input {
 }
 
 .missionInfoContainer {
-  background-color: var(--main-light-grey);
   max-width: 50rem;
+}
+
+.newsFlexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.missionInfoContainer,
+.newsArticleContainer {
+  background-color: var(--main-light-grey);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: var(--box-shadow);
 }
 
-.launchContentContainer {
+.newsArticleContainer {
+  width: 49%;
+}
+
+.launchContentContainer,
+.newsArticleContent {
   padding: var(--default-padding);
 }
 
@@ -281,4 +306,14 @@ input {
   box-shadow: var(--box-shadow);
   align-self: center;
   margin-top: 3rem;
+}
+
+.newsTitle {
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+}
+
+.newsImage {
+  width: 100%;
+  height: 20rem;
 }

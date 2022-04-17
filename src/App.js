@@ -1,12 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { URL } from "./Config";
+import { TEST_URL, URL } from "./Config";
 import SearchPage from "./Components/SearchPage";
 import AppLogo from "./images/logo_final.png";
+import News from "./Components/News";
 
 const App = () => {
   const [data, setData] = useState(null);
+  const [screen, setScreen] = useState(0);
 
   useEffect(() => {
     getLaunchData();
@@ -14,9 +16,8 @@ const App = () => {
 
   const getLaunchData = async () => {
     try {
-      const data = await axios.get(URL); // destructure data and give it an alias name
-      setData(data.data.results); // send destructured data into state, all data is then sent to a disply data component
-      console.log(data.data.results);
+      const data = await axios.get(URL);
+      setData(data.data.results);
     } catch (error) {
       console.log("An unexpected error occured", error);
     }
@@ -50,17 +51,30 @@ const App = () => {
   return (
     <>
       <div className="header">
-        <img src={AppLogo} className="logo" alt="launch finder logo"></img>
-        <h1>Upcoming rocket launches, from space agencies around the world.</h1>
+        <nav>
+          <div className="logoContainer" onClick={() => setScreen(0)}>
+            <img src={AppLogo} className="logo" alt="launch finder logo"></img>
+          </div>
+          <div className="news">
+            <button className="btn" onClick={() => setScreen(1)}>
+              News
+            </button>
+          </div>
+        </nav>
+        <h1>
+          Upcoming rocket launches and news from space agencies around the world
+        </h1>
       </div>
-
-      <div className="flexContainer">
-        {data ? (
-          <SearchPage data={data} onClickSort={onClickSort} />
-        ) : (
-          <p>Launch data currently unavailable</p>
-        )}
-      </div>
+      {screen === 0 && (
+        <div className="flexContainer">
+          {data ? (
+            <SearchPage data={data} onClickSort={onClickSort} />
+          ) : (
+            <p>Launch data currently unavailable</p>
+          )}
+        </div>
+      )}
+      {screen === 1 && <News screen={screen} />}
     </>
   );
 };
