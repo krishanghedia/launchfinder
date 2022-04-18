@@ -37,7 +37,9 @@ const News = () => {
                   <a href={news.url}>
                     <h3>{news.title}</h3>
                   </a>
-                  <p>{news.summary.slice(0, 115)}</p>
+                  <div>
+                    <p>{news.summary.slice(0, 115)}...</p>
+                  </div>
                 </div>
               </div>
             );

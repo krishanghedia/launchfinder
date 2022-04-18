@@ -129,6 +129,10 @@ span {
   padding: 2rem;
 }
 
+.news {
+  cursor: pointer;
+}
+
 h1 {
   font-size: var(--font-size-med);
   margin: var(--center-align);
@@ -198,6 +202,7 @@ input {
 }
 
 .logo {
+  cursor: pointer;
   width: 30%;
 }
 
