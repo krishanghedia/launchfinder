@@ -69,13 +69,12 @@ h5 {
 
 .header {
   display: flex;
-  justify-content: center;
   flex-direction: column;
 }
 
 nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
 }
 
