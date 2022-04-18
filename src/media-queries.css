@@ -1,6 +1,10 @@
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1024px) {
   .launchCountdownContent {
     flex-direction: column;
+  }
+
+  .newsFlexContainer {
+    gap: 18px;
   }
 }
 
@@ -29,11 +33,23 @@
   .loadMoreButton {
     width: 40%;
   }
+  .newsFlexContainer {
+    gap: 15px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .launchDataContainer {
     width: 50%;
+  }
+  .newsFlexContainer {
+    gap: 13px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .newsFlexContainer {
+    gap: 10px;
   }
 }
 
@@ -61,5 +77,15 @@
 
   .sort {
     margin-bottom: 1rem;
+  }
+
+  .newsArticleContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .newsImage {
+    height: 17rem;
   }
 }
