@@ -141,6 +141,11 @@ h3 {
   margin-bottom: 1rem;
 }
 
+.newsHeading {
+  display: flex;
+  justify-content: center;
+}
+
 .inputContainer {
   width: 100%;
   margin: var(--center-align);
@@ -210,7 +215,7 @@ input {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 49px;
 }
 
 .missionInfoContainer,
@@ -222,7 +227,7 @@ input {
 }
 
 .newsArticleContainer {
-  width: 49%;
+  width: 34%;
 }
 
 .launchContentContainer,

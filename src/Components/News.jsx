@@ -23,6 +23,10 @@ const News = () => {
 
   return (
     <>
+      <div className="newsHeading">
+        <h2>Latest News</h2>
+      </div>
+
       <div className="newsFlexContainer">
         {newsData &&
           newsData.map((news, idx) => {

@@ -56,17 +56,16 @@ const App = () => {
             <img src={AppLogo} className="logo" alt="launch finder logo"></img>
           </div>
           <div className="news">
-            <button className="btn" onClick={() => setScreen(1)}>
-              News
-            </button>
+            <p onClick={() => setScreen(1)}>News</p>
           </div>
         </nav>
-        <h1>
-          Upcoming rocket launches and news from space agencies around the world
-        </h1>
       </div>
       {screen === 0 && (
         <div className="flexContainer">
+          <h1>
+            Upcoming rocket launches and news from space agencies around the
+            world
+          </h1>
           {data ? (
             <SearchPage data={data} onClickSort={onClickSort} />
           ) : (
