@@ -141,7 +141,6 @@ h1 {
 
 h3 {
   font-size: var(--font-size-med);
-  margin-bottom: 1rem;
 }
 
 .newsHeading {
@@ -231,7 +230,7 @@ input {
 }
 
 .newsArticleContainer {
-  width: 34%;
+  width: 35%;
 }
 
 .launchContentContainer,
@@ -319,9 +318,9 @@ input {
   margin-top: 3rem;
 }
 
-.newsTitle {
-  color: rgb(255, 255, 255);
-  font-size: 4rem;
+.articleHeading {
+  font-size: 1rem;
+  width: 100%;
 }
 
 .newsImage {
