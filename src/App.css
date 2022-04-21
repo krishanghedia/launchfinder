@@ -19,6 +19,7 @@
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   --border-radius: 5rem;
   --default-padding: 1rem;
+  --sm-padding: 0.5rem;
 }
 
 .button {
@@ -160,7 +161,7 @@ input,
   border-radius: var(--border-radius);
   border-style: none;
   box-shadow: var(--box-shadow);
-  padding: var(--default-padding);
+  padding: var(--sm-padding);
 }
 
 input {
@@ -250,7 +251,7 @@ input {
 
 .currentStatus {
   display: inline-flex;
-  padding: 0.4rem;
+  padding: var(--sm-padding);
   border-radius: 10px;
 }
 
