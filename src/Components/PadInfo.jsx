@@ -1,10 +1,13 @@
 import React from "react";
 
 const PadInfo = (props) => {
+  console.log(props);
   const padLocation = props.pad.location.name;
   return (
     <>
-      <p>Launch Pad Location: {padLocation}</p>
+      <a href={props.pad.map_url} className="padLocation">
+        <p>Pad Location: {padLocation}</p>
+      </a>
     </>
   );
 };
