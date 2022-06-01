@@ -8,7 +8,6 @@ import PadInfo from "./PadInfo";
 import Timer from "./Timer";
 
 const LaunchContent = (props) => {
-  console.log(props);
   const [readMore, setReadMore] = useState(true);
   const { id, image, mission, status, pad, net, window_start } = props.launch;
 

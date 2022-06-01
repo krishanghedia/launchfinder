@@ -5,8 +5,8 @@
   --main-black: #1a1a1a;
   --default-font-size: 1.5rem;
   --font-size-large: 2.5rem;
-  --font-size-med: 1.7rem;
-  --font-size-sm: 1.3rem;
+  --font-size-med: 1.2rem;
+  --font-size-sm: 1rem;
   --border-radius: 5px;
   --center-align: 0 auto;
   --rounded-small: 0.5rem;
@@ -20,6 +20,7 @@
   --border-radius: 5rem;
   --default-padding: 1rem;
   --sm-padding: 0.5rem;
+  --def-px: 10px;
 }
 
 .button {
@@ -253,7 +254,17 @@ input {
 .currentStatus {
   display: inline-flex;
   padding: var(--sm-padding);
-  border-radius: 10px;
+  border-radius: var(--def-px);
+}
+
+.padInfoContainer {
+  display: flex;
+  align-items: center;
+}
+.padInfoImg {
+  width: 6%;
+  height: 6%;
+  margin-right: var(--def-px);
 }
 
 .padLocation {
