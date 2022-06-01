@@ -1,6 +1,7 @@
 import React from "react";
 
 import newShephard from "../images/new_shephard_web.jpg";
+import longMarch from "../images/long-march-2f.jpg";
 import falcon9Axiom from "../images/falcoln-9-axiom.jpg";
 import falcon9CrewFour from "../images/falcoln-9-crew-4.jpg";
 import soyuz from "../images/soyuz-2.1a-edited.jpg";
@@ -15,6 +16,7 @@ import newShephardNs21 from "../images/ns21.jpg";
 
 const imageObj = {
   "08040943-ec97-413d-b134-22e516e50528": newShephard,
+  "6e541c88-9172-4d50-aa35-655b5834254c": longMarch,
   "a3eeb03b-a209-4255-91b5-772dc0d2150e": falcon9Axiom,
   "d786d8fc-862b-45bf-8f7b-9ad862883f67": falcon9CrewFour,
   "bc73ec4f-633e-4eb5-8b8e-5c996ea1733f": soyuz,
