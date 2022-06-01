@@ -177,9 +177,10 @@ input {
 .loadMoreButton {
   background-color: var(--main-white);
   color: var(--main-black);
+  font-family: inherit;
   margin-bottom: 4rem;
-  padding: 1rem;
-  width: 10%;
+  padding: 0.5rem;
+  width: 7%;
   border-radius: var(--border-radius);
   border-style: none;
   box-shadow: var(--box-shadow);

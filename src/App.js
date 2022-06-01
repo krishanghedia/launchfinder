@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { TEST_URL, URL } from "./Config";
-import SearchPage from "./Components/SearchPage";
+import { URL } from "./Config";
 import AppLogo from "./images/logo_final.png";
+import SearchPage from "./Components/SearchPage";
 import News from "./Components/News";
 
 const App = () => {
@@ -22,6 +22,8 @@ const App = () => {
       console.log("An unexpected error occured", error);
     }
   };
+
+  // sort launch data by date
 
   const onClickSort = (order) => {
     console.log(order);

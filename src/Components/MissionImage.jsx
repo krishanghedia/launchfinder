@@ -11,6 +11,7 @@ import atlasVn22Launch from "../images/atlas_v_n22_launch.jpg";
 import falcon9CrewSix from "../images/falcoln-9-crew-6.jpg";
 import falcon9Rocket from "../images/Falcon_9_Rocket.jpg";
 import falcon9crew52023 from "../images/falcoln-9-crew-5-2023.jpg";
+import newShephardNs21 from "../images/ns21.jpg";
 
 const imageObj = {
   "08040943-ec97-413d-b134-22e516e50528": newShephard,
@@ -24,6 +25,7 @@ const imageObj = {
   "07e945c1-2ec6-4d29-a500-1afbe920440f": atlasVn22Launch,
   "bc325945-4bee-4412-84e1-14998b2eba5f": falcon9CrewSix,
   "1caacff9-837e-493b-afd4-4da54eeccdf2": falcon9crew52023,
+  "f058ecca-bda7-4797-ae47-b5c450b1bd78": newShephardNs21,
 };
 
 const MissionImage = (props) => {
