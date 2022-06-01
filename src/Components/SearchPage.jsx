@@ -53,7 +53,7 @@ const SearchPage = (props) => {
         launches.slice(0, loadMore).map((launch, idx) => {
           return (
             <div key={idx} className="launchDataContainer">
-              {<LaunchContent launch={launch} />}
+              <LaunchContent launch={launch} />
             </div>
           );
         })}
@@ -73,7 +73,7 @@ const SearchPage = (props) => {
       )}
 
       <div className="loadMoreContainer">
-        {loadMore === launches.length ? null : (
+        {loadMore === launches.length || query ? null : (
           <button onClick={loadMoreItems} className="loadMoreButton">
             Load More
           </button>
