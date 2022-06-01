@@ -6,7 +6,6 @@ import "../App.css";
 import "../media-queries.css";
 
 const SearchPage = (props) => {
-  console.log(props);
   let launches = props.data;
   const [query, setQuery] = useState("");
   const [loadMore, setLoadMore] = useState(3);
@@ -28,6 +27,8 @@ const SearchPage = (props) => {
       }
     });
   }
+
+  console.log(loadMore);
 
   return (
     <>
@@ -73,7 +74,7 @@ const SearchPage = (props) => {
       )}
 
       <div className="loadMoreContainer">
-        {loadMore === launches.length || query ? null : (
+        {loadMore >= launches.length || query ? null : (
           <button onClick={loadMoreItems} className="loadMoreButton">
             Load More
           </button>
