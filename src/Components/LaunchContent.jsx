@@ -6,10 +6,21 @@ import MissionImage from "./MissionImage";
 import OrbitType from "./OrbitType";
 import PadInfo from "./PadInfo";
 import Timer from "./Timer";
+import usaIcon from "../images/usa-48.png";
+import chinaIcon from "../images/china-48.png";
+import kazakhIcon from "../images/kazakhstan-48.png";
 
 const LaunchContent = (props) => {
   const [readMore, setReadMore] = useState(true);
   const { id, image, mission, status, pad, net, window_start } = props.launch;
+  console.log(pad);
+  const padInfoObj = {
+    "Corn Ranch, USA": usaIcon,
+    "Kennedy Space Center, FL, USA": usaIcon,
+    "Cape Canaveral, FL, USA": usaIcon,
+    "Jiuquan, People's Republic of China": chinaIcon,
+    "Baikonur Cosmodrome, Republic of Kazakhstan": kazakhIcon,
+  };
 
   const launchDescription = mission && mission.description;
 
@@ -31,7 +42,15 @@ const LaunchContent = (props) => {
         <div>
           <MissionImage id={id} image={image} />
           <div className="launchContentContainer">
-            <h3>{props.launch.name}</h3>
+            <div className="launchContentHeadline">
+              <img
+                src={padInfoObj[pad.location.name]}
+                alt="pad location icon"
+                className="launchInfoImg"
+              ></img>
+              <h3>{props.launch.name}</h3>
+            </div>
+
             <p className="missionInfoText">
               {readMore ? launchDescription.slice(0, 40) : launchDescription}
               <span onClick={toggleReadMore} className="read-or-hide">
