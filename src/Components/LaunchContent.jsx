@@ -13,7 +13,7 @@ import kazakhIcon from "../images/kazakhstan-48.png";
 const LaunchContent = (props) => {
   const [readMore, setReadMore] = useState(true);
   const { id, image, mission, status, pad, net, window_start } = props.launch;
-  console.log(pad);
+
   const padInfoObj = {
     "Corn Ranch, USA": usaIcon,
     "Kennedy Space Center, FL, USA": usaIcon,
@@ -28,7 +28,7 @@ const LaunchContent = (props) => {
     setReadMore(!readMore);
   };
 
-  if (mission === null) {
+  if (!mission) {
     return (
       <div>
         <p>Mission information not available</p>
